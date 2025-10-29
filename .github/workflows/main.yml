@@ -5,7 +5,7 @@ on:
 
 env:
   GLFW_VERSION: "3.4"
-  CUDAPIXELCANVAS_VERSION: "2.7"
+  CUDAPIXELCANVAS_VERSION: "2.8"
   ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: true
   
 jobs:
@@ -65,7 +65,7 @@ jobs:
     - name: Download and Extract CUDA Toolkit ${{ matrix.cuda-version }}
       run: |
         if ("${{ matrix.cuda-version }}" -eq "12.9") {
-          choco install cuda --version=12.9.0
+          choco install cuda --version=12.9.1.576
         } elseif ("${{ matrix.cuda-version }}" -eq "12.4") {
           choco install cuda --version=12.4.0.551
         } else {
